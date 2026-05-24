@@ -1,4 +1,4 @@
-# Automated-Data-Loading-from-Amazon-S3-to-Snowflake-using-Apache-Airflow-on-AWS-EC2
+# Automated-Data-Loading-from-Amazon-S3-to-Snowflake
 An end-to-end Data Engineering pipeline that automates loading CSV data from AWS S3 into Snowflake using Apache Airflow on EC2. The workflow includes S3 file sensing, automatic table creation, data ingestion, and email notifications for reliable and scalable cloud-based ETL orchestration.
 ### Architecture Diagram
 <img width="1095" height="568" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/adfec79d-f7bd-487f-9dd5-4ec0eabde09e" />
@@ -8,12 +8,19 @@ An end-to-end Data Engineering pipeline that automates loading CSV data from AWS
 The pipeline follows the below sequence:
 
 Data files are uploaded into an Amazon S3 bucket.
+
 Apache Airflow running on an AWS EC2 instance monitors the bucket.
+
 The S3KeySensor checks whether the target file exists.
+
 Once detected, Airflow executes SQL queries in Snowflake.
+
 A Snowflake table is automatically created if not present.
+
 CSV data is copied from S3 into Snowflake tables.
+
 Pipeline execution status is logged inside Airflow.
+
 Optional email notifications can be configured for success/failure alerts.
 
 ### Key Features
@@ -32,6 +39,7 @@ Production-style cloud deployment
 
 ### Technologies Used
 Cloud Services
+
 Amazon Web Services (AWS)
 EC2
 S3
@@ -110,7 +118,6 @@ Automate bulk data loading
 Efficient ingestion of structured datasets
 
 ### End-to-End Data Flow
-
 CSV File
    ↓
 Amazon S3 Bucket
